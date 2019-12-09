@@ -2,11 +2,17 @@ modules:
     workshop-overview:
         name: Workshop Overview
         exit_sign: Setup Environment
+    workshop-introduction:
+        name: Introduction
+    workshop-content:
+        name: Labs
     setup-environment:
         name: Setup Environment
         exit_sign: Start Workshop
-    exercises/01-sample-content:
+    labs/00-sample-content:
         name: Sample Content
+    labs/01-welcome:
+        name: Welcome
     workshop-summary:
         name: Workshop Summary
         exit_sign: Finish Workshop

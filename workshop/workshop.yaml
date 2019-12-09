@@ -1,8 +1,11 @@
-name: Sample Workshop
+name: Openshift 4 - Demojam 101
 
 modules:
     activate:
     - workshop-overview
+    - workshop-introduction
+    - workshop-content
     - setup-environment
-    - exercises/01-sample-content
+    - exercises/00-sample-content
+    - exercises/01-welcome
     - workshop-summary
