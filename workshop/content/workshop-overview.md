@@ -1,8 +1,8 @@
-###Descriptions
+### Descriptions
 
 This workshop will have you deploying and creating native docker images for a Node.js based website and learning to leverage the power of OpenShift to build, deploy, scale, and automate.
 
-###Who should attend
+### Who should attend
 
 + Anyone who has had any exposure to Containers
 + Architects
@@ -10,7 +10,7 @@ This workshop will have you deploying and creating native docker images for a No
 + Technical leads
 + Operations Engineers
 
-###What you will learn
+### What you will learn
 
 + S21
 + Rollback Replication and Recovery

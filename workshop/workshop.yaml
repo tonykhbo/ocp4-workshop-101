@@ -6,6 +6,11 @@ modules:
     - workshop-introduction
     - workshop-content
     - setup-environment
-    - exercises/00-sample-content
-    - exercises/01-welcome
+    - labs/00-sample-content
+    - labs/01-welcome
+    - labs/02-byodocker
+    - labs/03-s2i
+    - labs/04-devmanage-app
+    - labs/05-webhooks-rollbacks
+    - labs/06-replication-recovery
     - workshop-summary
