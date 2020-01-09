@@ -142,7 +142,33 @@ oc get pods -w
 
 ##### *Web Console Instructions (Option 2)*
 
+In the Admin View of the Web Console, click on "Workload" on the leftside pane, then click on "Deployment Config". This is going to show basic details for all deployment configurations in this project: 
 
+![dj_dc_tab](images/lab4_workshop_dj_deploy_config_tab.png)
+
+Click the "demojam" deployment config:
+
+![dj_dc_info](images/lab4_workshop_dj_dc_details.png)
+
+There are a lot of details here, feel free to check them out and ask questions, but we are here to set some new environment variables.
+
+Click on the Environmen tab next to the Pods tab:
+
+![dj_env_tab](images/lab4_workshop_dj_env_tab.png)
+
+Add an environment variable with the name MYSTERY and a value of 'true':
+
+![dj_env_true](images/lab4_workshop_dj_env_true.png)
+
+Scroll down to the bottom and click "Save". 
+
+If you are quick enough you will see a new pod spin up and an the old pod spin down. This is due to the deployment config strategy being set to "Rolling" and having a "ConfigChange" trigger, OpenShift auto deployed a new pod as soon as you updated with the env variable.
+
+![dj_env_rollout](images/lab4_workshop_dj_rollout.png)
+
+With the new environment variables set, the app should look like this in your web browser (the play button will become green): 
+
+![dj_web_green](images/lab4_workshop_dj_green.png)
 
 <br>
 
@@ -158,25 +184,19 @@ In the terminal run the following command:
 ```execute
 oc get pods
 ```
-<br>
 
 Find the pod name for your Running pod:
 
 ```
 oc exec -it [POD NAME] /bin/bash
-
 ```
-
-<br>
 
 You are now interactively attached to the container in your pod. Let's look for the environment variables we set:
 
+```execute
+env | grep MYSTERY
 ```
-ls
-
-```
-
-<br>
+That should return the **MYSTERY=true** matching the value that we set in the deployment config.
 
 ```execute
 exit
@@ -184,6 +204,22 @@ exit
 <br>
 
 ##### *Web Console Instructions (Option 2)*
+
+Inside the Admin View of the web console, click "Workloads" on the left side pane. Then, click on Pods in the dropdown: 
+
+![workload_pod](images/lab4_workshop_workloads_pods.png)
+
+Click on our demojam pod: 
+
+![djpod_details](images/lab4_workshop_pod_details.png)
+
+Click on the "Terminal" tab at the top next to "Events. 
+
+![djpod_terminal_tab](images/lab4_workshop_dj_terminal_tab.png)
+
+Inside the web page's terminal type: 'env | grep MYSTERY'
+
+That should return the MYSTERY=true matching the value that we set in the deployment config.
 
 <br>
 

@@ -22,6 +22,8 @@ modules:
         name: Lab 5
     labs/06-replication-recovery:
         name: Lab 6
+    labs/07-labels:
+        name: Lab 7
     workshop-summary:
         name: Workshop Summary
         exit_sign: Finish Workshop

@@ -13,4 +13,5 @@ modules:
     - labs/04-devmanage-app
     - labs/05-webhooks-rollbacks
     - labs/06-replication-recovery
+    - labs/06-labels
     - workshop-summary

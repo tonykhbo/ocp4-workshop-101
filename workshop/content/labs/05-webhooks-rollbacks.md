@@ -40,7 +40,7 @@ The node.js builder template creates a number of resources for you, but what we 
 
 <br>
 
-##### CLI Instructions (Option 1)
+##### *CLI Instructions (Option 1)*
 
 Inside the terminal, run the following command: 
 
@@ -48,7 +48,7 @@ Inside the terminal, run the following command:
 oc describe bc/demojam | grep -i webhook
 ```
 
-##### Web Console Instructions (Option 2)
+##### *Web Console Instructions (Option 2)*
 
 Jump back to the Admin View, Expands the Builds tab on the left hand side, then click on "Build Config":
 
@@ -82,7 +82,7 @@ In addition to setting up triggers for rebuilding code, we can setup a different
 
 Well, what if something isn't quite right with the latest version of our app? Let's say some feature we thought was ready for the world really isn't - and we didn't figure that out until after we deployed it. No problem, we can roll it back with the click of a button. 
 
-##### CLI Instructions (Option 1)
+##### *CLI Instructions (Option 1)*
 
 In the terminal, run the following command:
 
@@ -90,15 +90,12 @@ In the terminal, run the following command:
 oc rollback demojam-1
 ```
 
-<br>
 
 Check the status of your pods:
 
 ```execute
 oc get pods -w
 ```
-
-<br>
 
 OpenShift has done a graceful removal of the old pod and created a new one.
 
