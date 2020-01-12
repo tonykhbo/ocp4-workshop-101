@@ -73,7 +73,7 @@
               "imageChangeParams": {
                 "automatic": true,
                 "containerNames": [
-                  "nodejs-helloworld"
+                  "demojam-nodejs10"
                 ],
                 "from": {
                   "kind": "ImageStreamTag",
@@ -173,7 +173,7 @@
         "kind": "ImageStream",
         "apiVersion": "v1",
         "metadata": {
-          "name": "nodejs-010-centos7"
+          "name": "demojam-nodejs10"
         },
         "spec": {
           "dockerImageRepository": "${NAMESPACE}/demojam-nodejs10"

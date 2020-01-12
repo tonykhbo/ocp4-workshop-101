@@ -67,7 +67,7 @@ Click "Create" at the bottom
 Use the "oc new-app" command to create a simple nodejs application from a template file:
 
 ```execute
-oc new-app -f https://raw.githubusercontent.com/tonykhbo/ocp4-workshop-101/master/workshop_101_jenkins_template.json
+oc new-app -f https://raw.githubusercontent.com/tonykhbo/ocp4-workshop-101/master/workshop_template.json
 ```
 
 <!-- ##### *Web Console Instructions (Option 2)*
@@ -78,7 +78,7 @@ Then click on "+Add" and then click on "YAML"
 
 ![add_jenkins_template_json](images/lab8_workshop_jenkins_add_template_json.png)
 
-Navigate to https://raw.githubusercontent.com/tonykhbo/ocp4-workshop-101/master/workshop_101_jenkins_template.json
+Navigate to https://raw.githubusercontent.com/tonykhbo/ocp4-workshop-101/master/workshop_template.json
 
 Copy the contents of the raw .json file and paste it into Openshift:
 

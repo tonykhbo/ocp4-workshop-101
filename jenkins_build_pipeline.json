@@ -39,7 +39,7 @@ spec:
                   }
                   openshift.withCluster() {
                     openshift.withProject() {
-                      openshift.tag("origin-nodejs-sample:latest", "origin-nodejs-sample:prod")
+                      openshift.tag("demojam-nodejs10:latest", "demojam-nodejs10:prod")
                     }
                   }
                 }
@@ -50,7 +50,7 @@ spec:
                 script {
                   openshift.withCluster() {
                     openshift.withProject() {
-                      openshift.selector("dc", "frontend-prod").scale("--replicas=2")
+                      openshift.selector("dc", "frontend-prod").scale("--replicas=1")
                     }
                   }
                 }
