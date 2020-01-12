@@ -39,7 +39,7 @@ spec:
                   }
                   openshift.withCluster() {
                     openshift.withProject() {
-                      openshift.tag("demojam-nodejs10:latest", "demojam-nodejs10:prod")
+                      openshift.tag("origin-nodejs-sample:latest", "origin-nodejs-sample:prod")
                     }
                   }
                 }
