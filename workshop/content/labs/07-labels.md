@@ -78,6 +78,17 @@ Your updated label will show up in the running pod's:
 
 <br>
 
+
+
+#### Delete your demo-%username% Project
+
+In the Admin View, click on "Home" and then click on "Projects" in the drop down. On the far right hand side, there should be a vertical set of ellipses (...).
+
+Click on the ellipses and delete the project: 
+
+![demo-prj-delete](images/lab7_workshop_delete_project.png)
+
+
 #### Summary
 
 That's it for this lab. Now you know that all the objects in OpenShift can be labeled. This is important because those labels can be used as part of your CI/CD process. An upcoming lab will cover using labels for Blue/Green deployments. Labels can also be used for running your apps on specific nodes (e.g. just on SSD nodes or just on east coast nodes). 

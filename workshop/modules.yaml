@@ -24,6 +24,10 @@ modules:
         name: Lab 6
     labs/07-labels:
         name: Lab 7
+    labs/08-cicd-pipeline:
+        name: Lab 8
+    labs/09-bluegreen-deployment:
+        name: Lab 9
     workshop-summary:
         name: Workshop Summary
         exit_sign: Finish Workshop
