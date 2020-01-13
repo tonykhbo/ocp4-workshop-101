@@ -86,7 +86,7 @@ Show Openshift Projects that you have access to:
 oc get projects
 ```
 
-Now, set the project, demo-%username, that you created earlier to be your working project in the cli
+Now, set the project, demo-%username%, that you created earlier to be your working project in the cli
 
 ```execute
 oc project demo-%username%
