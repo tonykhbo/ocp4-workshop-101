@@ -1,6 +1,6 @@
 {
   "kind": "Template",
-  "apiVersion": "v1",
+  "apiVersion": "template.openshift.io/v1",
   "metadata": {
     "name": "nodejs-helloworld-sample",
     "annotations": {
@@ -206,7 +206,7 @@
         "source": {
           "type": "Git",
           "git": {
-            "uri": "https://github.com/nodeshift/centos7-s2i-nodejs.git"
+            "uri": "https://github.com/sclorg/nodejs-ex.git"
           }
         },
         "strategy": {
@@ -224,7 +224,11 @@
             "name": "origin-nodejs-sample:latest"
           }
         },
-        "resources": {}
+        "resources": {
+          "limits": {
+            "memory": "1Gi"
+          }
+        }
       }
     },
     {
@@ -306,7 +310,7 @@
       "name": "MEMORY_LIMIT",
       "displayName": "Memory Limit",
       "description": "Maximum amount of memory the container can use.",
-      "value": "256Mi"
+      "value": "512Mi"
     },
     {
       "name": "NAMESPACE",

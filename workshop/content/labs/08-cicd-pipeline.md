@@ -67,10 +67,12 @@ Click "Create" at the bottom
 Use the "oc new-app" command to create a simple nodejs application from a template file:
 
 ```execute
-oc new-app -f https://raw.githubusercontent.com/tonykhbo/ocp4-workshop-101/master/template.json
+oc new-app -f https://raw.githubusercontent.com/tonykhbo/ocp4-workshop-101/master/frontend_template.json
 ```
 
 <!-- ##### *Web Console Instructions (Option 2)*
+
+View available in catalog
 
 From the Developer View, select your project, cicd-%username%.
 
@@ -78,7 +80,7 @@ Then click on "+Add" and then click on "YAML"
 
 ![add_jenkins_template_json](images/lab8_workshop_jenkins_add_template_json.png)
 
-Navigate to https://raw.githubusercontent.com/tonykhbo/ocp4-workshop-101/master/template.json
+Navigate to https://raw.githubusercontent.com/tonykhbo/ocp4-workshop-101/master/frontend_template.json
 
 Copy the contents of the raw .json file and paste it into Openshift:
 
@@ -321,9 +323,43 @@ The Jenkins dashboard should indicate that a new build is executing.
 
 Back in the OpenShift Web Console, watch the pipeline execute. Once the "deployFrontEnd" stage completes, you should be able to visit the route for the frontend service in a web browser.
 
+![ocp_promote](images/lab8_workshop_ocp_pipeline_promote.png)
+
+Click on "Input Required" and you should get redirected to the Jenkins Web Console to approve the promotion to production.
+
+![jenkins_promote](images/lab8_workshop_jenkins_promote.png)
+
+Now return to the OpenShift Web Console and watch the pipeline finish.
+
+![jenkins_finish](images/lab8_workshop_ocp_pipeline_scaleup.png)
+
+Confirm the frontend-prod has deployed 2 pods.
+
+![frontend_deployed](images/)
+
+?Now create a secure route with TLS edge termination the frontend-prod service so the application can be visited. 
+
+![create_frontend_route](images/)
+
 #### Confirm both the test and production services are available
 
 ##### *CLI Instructions (Option 1)*
+
+Run the following commands in terminal:
+
+```execute
+oc get routes
+```
+
+Output should be similar to this:
+
+```
+NAME            HOST/PORT                                                                 PATH   SERVICES        PORT    TERMINATION     WILDCARD
+frontend        frontend-cicd-tonykhbo.apps.us-east-1.starter.openshift-online.com               frontend        <all>   edge            None
+frontend-prod   frontend-prod-cicd-tonykhbo.apps.us-east-1.starter.openshift-online.com          frontend-prod   web     edge            None
+```
+
+Use a web browser to visit the HOST/PORT (URLs) for the frontend and frontend-prod services. Don't forget the https://
 
 ##### *Web Console Instructions (Option 2)*
 
