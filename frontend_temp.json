@@ -206,7 +206,7 @@
         "source": {
           "type": "Git",
           "git": {
-            "uri": "https://github.com/sclorg/nodejs-ex.git"
+            "uri": "https://github.com/tonykhbo/circleci-hello-world-nodejs.git"
           }
         },
         "strategy": {
@@ -214,7 +214,7 @@
           "sourceStrategy": {
             "from": {
               "kind": "ImageStreamTag",
-              "name": "nodejs-010-centos7:latest"
+              "name": "nodejs:10"
             }
           }
         },
@@ -226,7 +226,8 @@
         },
         "resources": {
           "limits": {
-            "memory": "1Gi"
+            "memory": "200Mi",
+            "cpu": "500m"
           }
         }
       }
@@ -310,7 +311,7 @@
       "name": "MEMORY_LIMIT",
       "displayName": "Memory Limit",
       "description": "Maximum amount of memory the container can use.",
-      "value": "512Mi"
+      "value": "200Mi"
     },
     {
       "name": "NAMESPACE",
